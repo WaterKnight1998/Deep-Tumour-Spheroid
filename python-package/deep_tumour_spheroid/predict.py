@@ -111,10 +111,14 @@ def get_prediction_several_models(input_path, output_path, model_names):
             nd2Image = color.grey2rgb(nd2Image)
             image = Image.fromarray(nd2Image)
     else:
+        
         image = Image.open(input_path)
         image_np = np.array(image)
+
+        # Convert to 3 Channels if not
         if image_np.shape[0] != 3:
-            image_np = exposure.rescale_intensity(image_np)
+            if input_path.lower().endswith(".tiff") or input_path.lower().endswith(".tif"):
+                image_np = exposure.rescale_intensity(image_np)
             image_np = color.grey2rgb(image_np)
             image = Image.fromarray(image_np)
 
