@@ -1,5 +1,5 @@
 # Image Preprocessing
-pims_nd2>=1.0,<2.0
+pims_nd2>=1.1,<2.0
 nd2reader>=3.2.3,<4.0.0
 read-roi>=1.6.0,<2.0.0
 
