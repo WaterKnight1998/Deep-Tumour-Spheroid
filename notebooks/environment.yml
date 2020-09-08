@@ -1,0 +1,12 @@
+name: Deep-Tumour-Spheroid 
+dependencies:
+  - python=3.7
+  - pip  
+  - ipywidgets
+  - jupyterlab
+  - cudatoolkit=10.2
+  - pip:
+    - SemTorch==0.1.1
+    - albumentations==0.4.5
+    - https://download.pytorch.org/whl/nightly/cu102/torch-1.6.0.dev20200610-cp37-cp37m-linux_x86_64.whl
+    - https://download.pytorch.org/whl/nightly/cu102/torchvision-0.7.0.dev20200610-cp37-cp37m-linux_x86_64.whl
